@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-# A function that prints an integer
+# A function that prints x elements of a list
 
 
-def safe_print_integer_err(value):
-    from sys import stderr
-    try:
-        print("{:d}".format(value))
-        return True
-    except Exception as err:
-        stderr.write("Exception: {}\n".format(err))
-        return False 
+def safe_print_list(my_list=[], x=0):
+    ret = 0
+    for i in range(x):
+        try:
+            print("{}".format(my_list[i]), end="")
+            ret += 1
+        except IndexError:
+            break
+    print("")
+    return (ret) 
