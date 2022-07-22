@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-"""Defining the class"""
+"""Define a class Square."""
 
 
 class Square:
-    """Initializing the size"""
-    def __init__(self, size):
-        self.__size = size  #the __ is used to declare a private attribute
+    """Represent a square."""
 
+    def __init__(self, size):
+        """Initialize a new Square.
+        Args:
+            size (int): The size of the new square.
+        """
+        self.__size = size
