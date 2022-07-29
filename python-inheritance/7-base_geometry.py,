@@ -3,7 +3,7 @@
 
 
 class BaseGeometry:
-    """Reprsent base geometry."""
+    """Represent base geometry."""
 
     def area(self):
         """Not yet implemented."""
@@ -19,6 +19,6 @@ class BaseGeometry:
             ValueError: If value is <= 0.
         """
         if type(value) != int:
-            raise TypeError("{} must be an integer".format(name))
+            raise Type Error("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+            raise ValueError("{} must be greater than 0."format(name))
