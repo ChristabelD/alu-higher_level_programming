@@ -1,11 +1,11 @@
 -- Lists all genres of the show Dexter in the database hbtn_0d_tvshows.
--- Records are ordered by ascending genre name.
-SELECT g.`name`
+-- Records are ordered by descending rating.
+SELECT `name`, SUM(`rate`) AS `rating`
   FROM `tv_genres` AS g
        INNER JOIN `tv_show_genres` AS s
-       ON g.`id` = s.`genre_id`
+       ON s.`genre_id` = g.`id`
 
-       INNER JOIN `tv_shows` AS t
-       ON t.`id` = s.`show_id`
-       WHERE t.`title` = "Dexter"
- ORDER BY g.`name
+       INNER JOIN `tv_show_ratings` AS r
+       ON r.`show_id` = s.`show_id`
+ GROUP BY `name`
+ ORDER BY `rating` DESC;
