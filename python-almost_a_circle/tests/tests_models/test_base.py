@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """Defines unittests for base.py
 """
@@ -392,6 +391,5 @@ class TestBase_load_from_file(unittest.TestCase):
             Base.load_from_file([], 1)
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     unittest.main()
-
