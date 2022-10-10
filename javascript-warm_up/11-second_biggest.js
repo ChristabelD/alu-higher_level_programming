@@ -17,5 +17,4 @@ if (args.length <= 3) {
     }
   }
   console.log(secondlargest);
-
 }
