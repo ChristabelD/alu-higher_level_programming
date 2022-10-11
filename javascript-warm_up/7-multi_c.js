@@ -7,5 +7,4 @@ if (conV) {
   }
 } else {
   console.log('Missing number of occurrences');
-
 }
